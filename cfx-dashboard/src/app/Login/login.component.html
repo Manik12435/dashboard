@@ -1,0 +1,30 @@
+<div class="loginContainer">
+    <div class="loginFormContainer">
+        <div class="containerTitle">
+            <p>Login</p>
+        </div>
+        <div class="loginForm">
+            <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+                <div class="usernameDiv">
+                    <p class="fieldTitle">Username</p>
+                    <mat-form-field class="username">
+                        <input type="text" autocomplete="off" matInput placeholder="Username" name="username"
+                            formControlName="username">
+                    </mat-form-field>
+                </div>
+                <div class="passwordDiv">
+                    <p class="fieldTitle">Password</p>
+                    <mat-form-field class="password">
+                        <input [type]="showPassword ? 'text' : 'password'" autocomplete="off" matInput
+                            placeholder="Password" name="password" formControlName="password">
+                    </mat-form-field>
+                    <i class="fa fa-eye" *ngIf="showPassword" (click)="showPassword = !showPassword"></i>
+                    <i class="fa fa-eye-slash" *ngIf="showPassword" (click)="showPassword = !showPassword"></i>
+                </div>
+            </form>
+        </div>
+        <div class="buttons">
+            <button class="loginBtn" (click)="login()"> Login </button>
+        </div>
+    </div>
+</div>
