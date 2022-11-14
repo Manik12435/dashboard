@@ -5,6 +5,11 @@
 export const environment = {
   production: false,
 
+  api: {
+    login: "",
+    sample: ""
+  },
+
   routerPath: {
     login: 'login',
     landing: 'landing'

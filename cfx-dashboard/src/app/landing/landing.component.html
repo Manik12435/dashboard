@@ -1,1 +1,13 @@
-<p>landing works!</p>
+<div id="container">
+    <div class="buttons">
+        <button class="button" (click)="callAPI1()">Call service with Authorization</button>
+        <button class="button" (click)="callAPI2()">Call service without Authorization</button>
+    </div>
+    <div class="content">
+        <div class="message" *ngIf="authorized">Authorized</div>
+        <div class="message" *ngIf="!authorized">Unauthorized</div>
+    </div>
+    <div class="logout">
+        <button (click)="logout()">Logout</button>
+    </div>
+</div>

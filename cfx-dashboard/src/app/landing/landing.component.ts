@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  authorized: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  callAPI1(){
+    this.authorized = true
+  }
+
+  callAPI2(){
+    this.authorized = false
+  }
+
+  logout(){
+    this.router.navigate(['/' + environment.routerPath.login])
   }
 
 }
