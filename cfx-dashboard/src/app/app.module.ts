@@ -9,6 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 // import { MatFormFieldModule } from '@angular/material';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    
+    HttpClientModule
     // MDCFormFieldFoundation,
     // MatFormFieldModule
   ],
-  providers: [],
+  providers: [HttpClient, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
