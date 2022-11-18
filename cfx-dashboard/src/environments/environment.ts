@@ -6,8 +6,8 @@ export const environment = {
   production: false,
 
   api: {
-    login: "",
-    sample: ""
+    login: "http://localhost:8787/authenticate",
+    sample: "http://localhost:8787/hello"
   },
 
   routerPath: {

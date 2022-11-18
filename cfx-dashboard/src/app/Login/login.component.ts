@@ -36,10 +36,10 @@ export class LoginComponent implements OnInit {
           "password": this.loginForm.controls['password'].value?.trim()
         }
       }
-      // this.service.login(loginReq).subscribe((loginRes: any) => {
-        // console.log(loginRes);
+      this.service.login(loginReq).subscribe((loginRes: any) => {
+        console.log(loginRes);
         this.router.navigate(['/' + environment.routerPath.landing]);
-      // })
+      })
       
     } else {
       this.success = false;
