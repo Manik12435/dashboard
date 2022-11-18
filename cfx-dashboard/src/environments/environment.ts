@@ -6,8 +6,8 @@ export const environment = {
   production: false,
 
   api: {
-    login: "http://localhost:8787/authenticate",
-    sample: "http://localhost:8787/testJWT"
+    login: "http://lxtsptsgv042:8787/authenticate",
+    sample: "http://lxtsptsgv042:8787/testJWT"
   },
 
   routerPath: {
