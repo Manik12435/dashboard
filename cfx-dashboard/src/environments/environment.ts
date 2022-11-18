@@ -7,7 +7,7 @@ export const environment = {
 
   api: {
     login: "http://localhost:8787/authenticate",
-    sample: "http://localhost:8787/hello"
+    sample: "http://localhost:8787/testJWT"
   },
 
   routerPath: {
